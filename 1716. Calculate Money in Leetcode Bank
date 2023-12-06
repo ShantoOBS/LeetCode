@@ -1,0 +1,36 @@
+class Solution {
+public:
+    int totalMoney(int n) {
+      
+        
+  
+   int m=n/7;
+   vector<int>ans;
+
+        int sum=0;
+        for(int i=1;i<=m;i++){
+            int t=7+i;
+            for(int j=i;j<t;j++){
+
+              ans.push_back(j);
+            }
+        }
+        
+        
+        int s=n-ans.size();
+        int j=m+1;
+        while(s!=0){
+            
+            ans.push_back(j);
+            j++;
+            s--;
+        }
+     
+        for(auto i:ans){
+            sum+=i;
+        }
+        
+        return sum;
+        
+    }
+};
