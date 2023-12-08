@@ -1,0 +1,34 @@
+class Solution {
+
+    private:
+
+      bool check(vector<int>nums,int n,int j){
+
+    for(int i=0;i<n;i++){
+        if(nums[i]==j){
+            return true;
+        }
+    }
+    return false;
+}
+public:
+
+ 
+    int missingNumber(vector<int>& nums) {
+
+             int n=nums.size();
+        int i;
+        for( i=0;i<n;i++){
+
+            if(!(check(nums,n,i))){
+               
+                break;
+            }
+
+            }
+        
+       return i;
+    }
+    
+    
+};
