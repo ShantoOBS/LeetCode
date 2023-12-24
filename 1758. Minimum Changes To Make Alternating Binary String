@@ -1,0 +1,42 @@
+class Solution {
+public:
+    int minOperations(string s) {
+
+       int n=s.length();
+    vector<char>s1(n,'0');
+    
+    for(int i=1;i<n;i=i+2){
+        s1[i]='1';
+    }
+    
+     vector<char>s2(n,'1');
+    
+    for(int i=1;i<n;i=i+2){
+        s2[i]='0';
+    }
+    
+    int second=0,first=0;
+    int i=0,j=0;
+   while(i<n && j<n){
+       
+       if(s1[i] !=s[j]){
+           first++;
+       }
+       
+       if(s2[i] !=s[j]){
+           second++;
+       }
+       
+       i++;
+       j++;
+   }
+    
+    
+    
+    
+    
+     return min(first,second);
+        
+        
+    }
+};
